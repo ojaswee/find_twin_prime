@@ -1,4 +1,4 @@
-# find_twin_prime 
+# Finding Twin Prime
 
 A twin prime is a prime number that has a prime gap of two, in other words,
 differs from another prime number by two, for example (3,5) and(41, 43).
