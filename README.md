@@ -9,9 +9,10 @@ The most time-consuming code here is
 2) counting/printing twin prime  
 in parallel code, we want to focus on these part by multithreading and solve following errors.
 
-In parallel code, we will see 2 error from this code
-1)	From nested for loop 
-for (int j = 0; j <primeNumbers.size() && (primeNumbers[j] < maxNum / 2) + 1; j++)
-Error: termination test in OpenMP ‘for’ statement has improper form
-Because of the test case j <primeNumbers.size() && (primeNumbers[j] < maxNum / 2) + 1; we will have to simplify this condition.
+In parallel code, we will see 2 error from this code  
+1)	There is an error in nested for loop   
+for (int j = 0; j <primeNumbers.size() && (primeNumbers[j] < maxNum / 2) + 1; j++)  
+Error: termination test in OpenMP ‘for’ statement has improper form  
+Because of the test case j <primeNumbers.size() && (primeNumbers[j] < maxNum / 2) + 1; we will have to simplify this condition.  
 2)	break statement: serialized code allows for break statement but OpenMP we can only have a Structured block. The structured block is a block with one point of entry at the top and one point of exit at the bottom, so break will give us an error.
+
